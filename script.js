@@ -16,7 +16,7 @@ async function fecthAndShow() {
       return;
     }
 
-    const response = await fetch(`${apiUrl}?lang=${selectedLanguage}`);
+    const response = await fetch(`${apiUrl}?lang=${selectedLanguage}&type=json`, { mode: 'no-cors' });
 
     const data = await response.json();
     responseDiv.textContent = data["insult"] + "\n\r" + data["createdby"];
