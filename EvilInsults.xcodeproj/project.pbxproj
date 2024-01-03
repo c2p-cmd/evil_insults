@@ -11,7 +11,21 @@
 		0031B3792B452A1C008CFEFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0031B3782B452A1C008CFEFE /* ContentView.swift */; };
 		0031B37B2B452A1D008CFEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0031B37A2B452A1D008CFEFE /* Assets.xcassets */; };
 		0031B37F2B452A1D008CFEFE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0031B37E2B452A1D008CFEFE /* Preview Assets.xcassets */; };
+		0031B3862B452B1D008CFEFE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0031B3852B452B1D008CFEFE /* API.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0031B3A02B453388008CFEFE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0031B3732B452A1C008CFEFE /* EvilInsults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvilInsults.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +34,10 @@
 		0031B37A2B452A1D008CFEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0031B37C2B452A1D008CFEFE /* EvilInsults.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EvilInsults.entitlements; sourceTree = "<group>"; };
 		0031B37E2B452A1D008CFEFE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0031B3852B452B1D008CFEFE /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		0031B38D2B453387008CFEFE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0031B38F2B453387008CFEFE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0031B3A32B453C89008CFEFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				0031B3752B452A1C008CFEFE /* EvilInsults */,
+				0031B38C2B453387008CFEFE /* Frameworks */,
 				0031B3742B452A1C008CFEFE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,11 +71,13 @@
 		0031B3752B452A1C008CFEFE /* EvilInsults */ = {
 			isa = PBXGroup;
 			children = (
+				0031B3A32B453C89008CFEFE /* Info.plist */,
 				0031B3762B452A1C008CFEFE /* EvilInsultsApp.swift */,
 				0031B3782B452A1C008CFEFE /* ContentView.swift */,
 				0031B37A2B452A1D008CFEFE /* Assets.xcassets */,
 				0031B37C2B452A1D008CFEFE /* EvilInsults.entitlements */,
 				0031B37D2B452A1D008CFEFE /* Preview Content */,
+				0031B3852B452B1D008CFEFE /* API.swift */,
 			);
 			path = EvilInsults;
 			sourceTree = "<group>";
@@ -69,6 +90,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0031B38C2B453387008CFEFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0031B38D2B453387008CFEFE /* WidgetKit.framework */,
+				0031B38F2B453387008CFEFE /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,6 +109,7 @@
 				0031B36F2B452A1C008CFEFE /* Sources */,
 				0031B3702B452A1C008CFEFE /* Frameworks */,
 				0031B3712B452A1C008CFEFE /* Resources */,
+				0031B3A02B453388008CFEFE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -140,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0031B3792B452A1C008CFEFE /* ContentView.swift in Sources */,
+				0031B3862B452B1D008CFEFE /* API.swift in Sources */,
 				0031B3772B452A1C008CFEFE /* EvilInsultsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +296,7 @@
 		0031B3832B452A1D008CFEFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EvilInsults/EvilInsults.entitlements;
@@ -274,6 +307,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EvilInsults/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -302,6 +336,7 @@
 		0031B3842B452A1D008CFEFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EvilInsults/EvilInsults.entitlements;
@@ -312,6 +347,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EvilInsults/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
